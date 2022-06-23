@@ -105,6 +105,8 @@ def predict_outcome(model, data):
 def main():
     st.title("Predict your Kickstarter's Success!")
 
+    st.markdown('This project was inspired by a research paper by S.Khosla et al. The paper discussed the application of various machine learning models to predict the outcome of Kickstarter projects. The results obtained in the paper were quite reproducable, as many of the models tested in this project see similar accuracy scores to that of the Standford paper, albeit with slightly different methodology/data. [Read the paper here](https://cs229.stanford.edu/proj2021spr/report2/81995033.pdf)')
+
     st.write('Play around with the parameters on the left and hit the button to predict the outcome.')
 
     current_model = st.sidebar.selectbox("Select the model you want to use", all_models)
@@ -113,12 +115,12 @@ def main():
     country = st.sidebar.selectbox("The country the Project is based in", countries)
     parent_name = st.sidebar.selectbox("Category", categories)
     name = st.sidebar.selectbox("Sub-Category", categories[parent_name])
-    goal_usd = st.sidebar.text_input("target funding goal ($USD)", value=0)
+    goal_usd = st.sidebar.text_input("target funding goal ($USD)", value=5000)
     total_days_active = st.sidebar.text_input(
-        "How long will the project be live? (days)", value=0
+        "How long will the project be live? (days)", value=30
     )
     launch_time = st.sidebar.text_input(
-        "How long will the project be visible before going live? (days)", value=0
+        "How long will the project be visible before going live? (days)", value=2
     )
 
     # create button to generate prediction
