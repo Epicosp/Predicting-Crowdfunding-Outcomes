@@ -1,7 +1,7 @@
 # Project-2---Predicting-Crowdfunding-Outcomes
 This project was inspired by a research paper by S.Khosla et al. The paper discussed the application of various machine learning models to predict the outcome of Kickstarter projects. The results obtained in the paper were quite reproducable, as many of the models tested in this project see similar accuracy scores to that of the Standford paper, albeit with slightly different methodology/data. [Read the paper here](https://cs229.stanford.edu/proj2021spr/report2/81995033.pdf)
 
-This repository includes the data collection, processing and model building as well as a small streamlit application for anyone wanting to test out the model with their own input data.
+This repository includes the data collection, processing and model building as well as a small streamlit application for anyone wanting to test out the model with their own input data. [The app is hosted using streamlit's free service here.](https://share.streamlit.io/epicosp/predicting-crowdfunding-outcomes/main/app/app.py)
 
 ## Raw data
 All of the data used in this project was sourced from a pre-existing amazon s3 bucket, which was compiled by a [web scraping service](https://webrobots.io/kickstarter-datasets/), The download link for the exact dataset used can be found [here](https://s3.amazonaws.com/weruns/forfun/Kickstarter/Kickstarter_2022-04-21T03_20_08_060Z.zip).
@@ -35,7 +35,7 @@ The implementation of the XGBoosting algorithm was used as a comparison to the r
 
 ---
 ## App
-A small applcation was built using streamlit to allow users to play around with the pretrained random forest, SVM and neural network models. [The app is hosted using streamlit's free service here.](https://share.streamlit.io/epicosp/predicting-crowdfunding-outcomes/main/app/app.py)
+A small applcation was built using streamlit to allow users to play around with the pretrained random forest, SVM and neural network models.
 
 After experimenting with the application, it is obvious that some of the categories contain highly baised data and will give a guaranteed success regardless of other parameters.
 
